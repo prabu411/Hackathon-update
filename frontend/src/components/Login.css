@@ -1,0 +1,118 @@
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url('loginpage.png');
+    background-size: cover;
+}
+
+.login-box {
+    background-color: #1e1e1e !important;
+    padding: 40px;
+    border-radius: 12px;
+    width: 350px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    border: 1px solid #000000;
+}
+
+
+
+h1{
+    color: #cccccc !important;
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-shadow: 0px 0px 10px rgba(236, 85, 85, 0.7);
+}
+h2 {
+    color: #75248c !important; /* Bright Violet */
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 8px rgba(236, 85, 228, 0.4);
+}
+
+h3 {
+    color: #cccccc !important;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+/* --- FORCE WHITE INPUTS --- */
+input {
+    width: 100%;
+    padding: 12px !important;
+    margin-bottom: 15px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 6px !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-size: 15px !important;
+}
+
+input:focus {
+    outline: none;
+    border-color: #bf55ec !important; /* Focus border matches title */
+    box-shadow: 0 0 5px rgba(191, 85, 236, 0.5);
+}
+
+/* --- BIGGER TOGGLE BUTTONS --- */
+.toggle-group {
+    display: flex;
+    justify-content: space-between;
+    background: #333;
+    padding: 8px;
+    border-radius: 30px;
+    margin-bottom: 25px;
+}
+
+.toggle-group button {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #aaa;
+    padding: 12px 0;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.2s;
+}
+
+.toggle-group button.active {
+    background-color: #bf55ec !important; /* Buttons match title */
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* --- LOGIN BUTTON --- */
+.action-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #bf55ec !important; /* Button matches title */
+    color: white !important;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.action-btn:hover {
+    background-color: #9b30c9 !important; /* Darker violet on hover */
+}
+
+.switch-text {
+    margin-top: 15px;
+    color: #bbb;
+    font-size: 14px;
+    cursor: pointer;
+}

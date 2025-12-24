@@ -1,0 +1,166 @@
+/* src/components/StudentDashboard.css */
+
+
+.dashboard-container {
+    min-height: 100vh;
+    width: 100%;
+    /* Dark Background */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.85)),
+    url('Studentdashboard.png');
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.loading-text { color: white; text-align: center; margin-top: 100px; font-size: 24px; }
+
+
+.main-header {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(0,0,0,0.5);
+    border-bottom: 1px solid #444;
+}
+
+.main-header h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    color: #75248c;
+    text-shadow: 0 0 0px rgb(117, 36, 140);
+}
+
+.quote {
+    color: #bf55ec; /* Violet */
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.dashboard-content {
+    flex: 1; /* Pushes footer down */
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers all cards */
+}
+
+.profile-center-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 800px; /* Limits width so it doesn't stretch too far */
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(191, 85, 236, 0.3);
+    text-align: center;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.big-name { font-size: 32px; color: white; margin-bottom: 10px; }
+.big-id { font-size: 24px; color: #bf55ec; margin-bottom: 10px; }
+.dept-text { font-size: 20px; color: #aaa; margin-bottom: 30px; }
+
+.stats-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+    padding: 20px 0;
+}
+
+.stat-item span { display: block; font-size: 18px; color: #ccc; margin-bottom: 5px; }
+.big-count { font-size: 50px; font-weight: bold; color: #bf55ec; }
+
+.registered-center-list h4 { color: #fff; margin-bottom: 15px; font-size: 20px; }
+.registered-center-list ul { list-style: none; padding: 0; }
+.registered-center-list li {
+    font-size: 18px;
+    padding: 8px;
+    color: #ddd;
+    border-bottom: 1px solid #333;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.events-section {
+    width: 100%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 30px;
+    display: inline-block;
+    border-bottom: 3px solid #bf55ec;
+    padding-bottom: 5px;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.event-card {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #555;
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.event-card:hover { transform: translateY(-5px); border-color: #bf55ec; }
+.event-card h3 { color: #fff; font-size: 24px; margin-bottom: 10px; }
+.date-badge { display: inline-block; background: #333; padding: 5px 10px; border-radius: 5px; color: #ddd; margin: 10px 0; }
+.desc { color: #bbb; line-height: 1.5; margin-bottom: 20px; }
+
+.btn-register, .btn-registered {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-register { background: #bf55ec; color: white; }
+.btn-registered { background: #28a745; color: white; cursor: default; }
+
+.main-footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0,0,0,0.8);
+    border-top: 1px solid #444;
+    margin-top: 50px;
+}
+
+.logout-btn-footer {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 15px 50px; /* Big Button */
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.4);
+    transition: all 0.2s;
+}
+
+.logout-btn-footer:hover {
+    background-color: #ff1a1a;
+    transform: scale(1.05);
+}
