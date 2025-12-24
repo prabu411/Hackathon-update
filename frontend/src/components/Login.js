@@ -25,7 +25,7 @@ const Login = () => {
         if (userType === 'admin') {
             // ADMIN LOGIN
             try {
-                const response = await axios.post('http://localhost:5000/api/admin/login', {
+                const response = await axios.post('https://hackathon-backend-r2qt.onrender.com/api/admin/login', {
                     username, password
                 });
 
@@ -42,7 +42,7 @@ const Login = () => {
         } else {
             // STUDENT LOGIN
             try {
-                const response = await axios.post('http://localhost:5000/api/students/login', {
+                const response = await axios.post('https://hackathon-backend-r2qt.onrender.com/api/students/login', {
                     username, rollNumber, password
                 });
                 // Save Student Object
@@ -58,7 +58,7 @@ const Login = () => {
 
     const handleSignup = async () => {
         try {
-            await axios.post('http://localhost:5000/api/students/signup', {
+            await axios.post('https://hackathon-backend-r2qt.onrender.com/api/students/signup', {
                 name, year, department, rollNumber, username, password
             });
             alert("✅ Signup Successful!");

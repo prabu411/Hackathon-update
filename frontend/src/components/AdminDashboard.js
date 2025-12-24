@@ -33,7 +33,7 @@ const AdminDashboard = () => {
     //  FETCH EVENTS
     const fetchHackathons = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/hackathons/all');
+            const res = await axios.get('https://hackathon-backend-r2qt.onrender.com/api/hackathons/all');
             setHackathons(res.data);
         } catch (error) {
             console.error("Error loading events:", error);
@@ -54,12 +54,12 @@ const AdminDashboard = () => {
 
         try {
             if (isEditing) {
-                await axios.put(`http://localhost:5000/api/hackathons/update/${editId}`, formData);
+                await axios.put(`https://hackathon-backend-r2qt.onrender.com/api/hackathons/update/${editId}`, formData);
                 alert("Event Updated Successfully!");
                 setIsEditing(false);
                 setEditId(null);
             } else {
-                await axios.post('http://localhost:5000/api/hackathons/create', formData);
+                await axios.post('https://hackathon-backend-r2qt.onrender.com/api/hackathons/create', formData);
                 alert("Event Created Successfully!");
             }
             setFormData({ name: '', organizedBy: '', date: '', description: '', link: '' });
@@ -88,7 +88,7 @@ const AdminDashboard = () => {
     const handleDelete = async (id) => {
         if (window.confirm("⚠ Are you sure you want to delete this event?")) {
             try {
-                await axios.delete(`http://localhost:5000/api/hackathons/delete/${id}`);
+                await axios.delete(`https://hackathon-backend-r2qt.onrender.com/api/hackathons/delete/${id}`);
                 fetchHackathons();
             } catch (error) {
                 alert("Could not delete.");
@@ -98,7 +98,7 @@ const AdminDashboard = () => {
 
     const handleViewStudents = async (eventId) => {
         try {
-            const res = await axios.get(`http://localhost:5000/api/hackathons/participants/${eventId}`);
+            const res = await axios.get(`https://hackathon-backend-r2qt.onrender.com/api/hackathons/participants/${eventId}`);
             setStudentList(res.data);
             setViewingStudents(eventId);
         } catch (error) {

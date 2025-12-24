@@ -27,12 +27,12 @@ const StudentDashboard = () => {
 
             try {
                 //new student data
-                const studentRes = await axios.get(`http://localhost:5000/api/students/${localID}`);
+                const studentRes = await axios.get(`https://hackathon-backend-r2qt.onrender.com/api/students/${localID}`);
                 const freshStudentData = studentRes.data;
                 setStudent(freshStudentData);
 
                 // Get All Hackathons
-                const eventsRes = await axios.get('http://localhost:5000/api/hackathons/all');
+                const eventsRes = await axios.get('https://hackathon-backend-r2qt.onrender.com/api/hackathons/all');
                 const allEvents = eventsRes.data;
                 setHackathons(allEvents);
 
@@ -67,7 +67,7 @@ const StudentDashboard = () => {
         if (!confirmJoin) return;
 
         try {
-            await axios.post('http://localhost:5000/api/students/register-event', {
+            await axios.post('https://hackathon-backend-r2qt.onrender.com/api/students/register-event', {
                 studentId: student._id,
                 hackathonId: event._id
             });
@@ -75,7 +75,7 @@ const StudentDashboard = () => {
             alert(` Success! Saved to Atlas.`);
 
             // Reload Data
-            const updatedStudentRes = await axios.get(`http://localhost:5000/api/students/${student._id}`);
+            const updatedStudentRes = await axios.get(`https://hackathon-backend-r2qt.onrender.com/api/students/${student._id}`);
             setStudent(updatedStudentRes.data);
             setMyEvents(prev => [...prev, event]);
 
